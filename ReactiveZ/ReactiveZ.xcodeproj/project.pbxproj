@@ -58,8 +58,8 @@
 		F432B6BC2077540C00118CDD /* ReactiveZ */ = {
 			isa = PBXGroup;
 			children = (
-				F432B6D3207754DB00118CDD /* extension */,
-				F432B6D1207754BC00118CDD /* controls */,
+				F432B6C82077547D00118CDD /* NSPointerArrayExtension.swift */,
+				F432B6CF2077548A00118CDD /* RzTextField.swift */,
 				F432B6C72077547D00118CDD /* Observable.swift */,
 				F432B6C92077547D00118CDD /* ObservableField.swift */,
 				F432B6C52077547D00118CDD /* Observe.swift */,
@@ -68,22 +68,6 @@
 				F432B6BE2077540C00118CDD /* Info.plist */,
 			);
 			path = ReactiveZ;
-			sourceTree = "<group>";
-		};
-		F432B6D1207754BC00118CDD /* controls */ = {
-			isa = PBXGroup;
-			children = (
-				F432B6CF2077548A00118CDD /* RzTextField.swift */,
-			);
-			path = controls;
-			sourceTree = "<group>";
-		};
-		F432B6D3207754DB00118CDD /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				F432B6C82077547D00118CDD /* NSPointerArrayExtension.swift */,
-			);
-			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
