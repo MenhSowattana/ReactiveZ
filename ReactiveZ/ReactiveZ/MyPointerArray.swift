@@ -15,7 +15,7 @@
 //
 
 
-extension NSPointerArray {
+class MyPointerArray : NSPointerArray {
     func addObject(_ object: AnyObject?) {
         guard let strongObject = object else { return }
         

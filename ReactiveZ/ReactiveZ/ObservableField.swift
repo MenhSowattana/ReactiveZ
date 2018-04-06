@@ -11,12 +11,12 @@ import UIKit
 class ObservableField<Element>: Observable{
     
     private var rx_value : Element!
-    var observers : NSPointerArray?
+    var observers : MyPointerArray?
     private var mapBack: Any?
     
     init(_ value : Element) {
         rx_value = value
-        observers = NSPointerArray.weakObjects()
+        observers = NSPointerArray.weakObjects() as? MyPointerArray
     }
   
     override func onSubscribed<T>(observer: Observer<T>) {
