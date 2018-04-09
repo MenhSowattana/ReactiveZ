@@ -8,8 +8,9 @@
 
 import UIKit
 
-class Observe {
+public class Observe {
     func onObservedValueChanged<T>(value: T) {
         preconditionFailure("This method must be overridden")
     }
 }
+

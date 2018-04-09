@@ -14,7 +14,7 @@ enum ObserveState {
     case None
 }
 
-class Observer<Element>: Observe {
+public class Observer<Element>: Observe {
     
     weak var observable: Observable?
     private var _value: Element?
@@ -27,7 +27,7 @@ class Observer<Element>: Observe {
         _value = value
     }
     
-    func bind<T>(to variable : ObservableField<T>, map: ((_ value: T) -> Element)? = nil, mapBack: ((_ value: Element) -> T)? = nil){
+    public func bind<T>(to variable : ObservableField<T>, map: ((_ value: T) -> Element)? = nil, mapBack: ((_ value: Element) -> T)? = nil){
         if state == .None {
             observable = variable
             self.map = map
@@ -40,7 +40,7 @@ class Observer<Element>: Observe {
     }
     
     
-    func observe<T>(observable: ObservableField<T>, map:  ((_ value: T) -> Element)? = nil, mapBack: ((_ value: Element) -> T)? = nil) {
+    public func observe<T>(observable: ObservableField<T>, map:  ((_ value: T) -> Element)? = nil, mapBack: ((_ value: Element) -> T)? = nil) {
         if state == .None {
             self.observable = observable
             self.map = map
@@ -64,13 +64,13 @@ class Observer<Element>: Observe {
         }
     }
     
-    func update(value: Element) {
+    public func update(value: Element) {
         guard let `observable` = observable else { return }
         observable.setValue(value: value)
         
     }
     
-    func get() -> Element {
+    public func get() -> Element {
         return _value!
     }
     

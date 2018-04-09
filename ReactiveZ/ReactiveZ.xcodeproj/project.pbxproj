@@ -11,7 +11,7 @@
 		F432B6CA2077547D00118CDD /* Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C52077547D00118CDD /* Observe.swift */; };
 		F432B6CB2077547D00118CDD /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C62077547D00118CDD /* Observer.swift */; };
 		F432B6CC2077547D00118CDD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C72077547D00118CDD /* Observable.swift */; };
-		F432B6CD2077547D00118CDD /* MyPointerArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C82077547D00118CDD /* MyPointerArray.swift */; };
+		F432B6CD2077547D00118CDD /* ExtensionPointerArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C82077547D00118CDD /* ExtensionPointerArray.swift */; };
 		F432B6CE2077547D00118CDD /* ObservableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C92077547D00118CDD /* ObservableField.swift */; };
 		F432B6D02077548A00118CDD /* RzTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6CF2077548A00118CDD /* RzTextField.swift */; };
 /* End PBXBuildFile section */
@@ -23,7 +23,7 @@
 		F432B6C52077547D00118CDD /* Observe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observe.swift; sourceTree = "<group>"; };
 		F432B6C62077547D00118CDD /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		F432B6C72077547D00118CDD /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		F432B6C82077547D00118CDD /* MyPointerArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPointerArray.swift; sourceTree = "<group>"; };
+		F432B6C82077547D00118CDD /* ExtensionPointerArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionPointerArray.swift; sourceTree = "<group>"; };
 		F432B6C92077547D00118CDD /* ObservableField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableField.swift; sourceTree = "<group>"; };
 		F432B6CF2077548A00118CDD /* RzTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RzTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +58,7 @@
 		F432B6BC2077540C00118CDD /* ReactiveZ */ = {
 			isa = PBXGroup;
 			children = (
-				F432B6C82077547D00118CDD /* MyPointerArray.swift */,
+				F432B6C82077547D00118CDD /* ExtensionPointerArray.swift */,
 				F432B6CF2077548A00118CDD /* RzTextField.swift */,
 				F432B6C72077547D00118CDD /* Observable.swift */,
 				F432B6C92077547D00118CDD /* ObservableField.swift */,
@@ -154,7 +154,7 @@
 				F432B6D02077548A00118CDD /* RzTextField.swift in Sources */,
 				F432B6CE2077547D00118CDD /* ObservableField.swift in Sources */,
 				F432B6CC2077547D00118CDD /* Observable.swift in Sources */,
-				F432B6CD2077547D00118CDD /* MyPointerArray.swift in Sources */,
+				F432B6CD2077547D00118CDD /* ExtensionPointerArray.swift in Sources */,
 				F432B6CB2077547D00118CDD /* Observer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

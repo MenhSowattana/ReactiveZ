@@ -8,14 +8,15 @@
 
 import UIKit
 
-public class Observable {    
+public class Observable {
     
-    func setValue<T>(value : T) {
+    public func setValue<T>(value : T) {
         preconditionFailure("This method must be overridden")
     }
     
-    func onSubscribed<T>(observer: Observer<T>){
+    public func onSubscribed<T>(observer: Observer<T>){
         preconditionFailure("This method must be overridden")
     }
     
 }
+

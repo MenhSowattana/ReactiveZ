@@ -6,16 +6,7 @@
 //  Copyright © 2018 icoding. All rights reserved.
 //
 
-//
-//  UITextField+Binding.swift
-//  MVVMTest
-//
-//  Created by Menh Sowattana on 1/29/18.
-//  Copyright © 2018 Menh Sowattana. All rights reserved.
-//
-
-
-class MyPointerArray : NSPointerArray {
+extension NSPointerArray {
     func addObject(_ object: AnyObject?) {
         guard let strongObject = object else { return }
         

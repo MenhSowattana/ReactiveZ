@@ -8,8 +8,8 @@
 
 import UIKit
 
-class RzTextField: UITextField {
-    var rz: Observer<String>!
+public class RzTextField: UITextField {
+    public var rz: Observer<String>!
     
     fileprivate func initialize() {
         if rz == nil {
@@ -27,7 +27,7 @@ class RzTextField: UITextField {
         initialize()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
     }
@@ -40,3 +40,4 @@ class RzTextField: UITextField {
         rz = nil
     }
 }
+
