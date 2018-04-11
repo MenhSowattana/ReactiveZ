@@ -23,7 +23,7 @@ public class Observer<Element>: Observe {
     var map: Any?
     var update: ((_ value: Element?) ->  Void)?
     
-    init(_ value: Element) {
+    public init(_ value: Element) {
         _value = value
     }
     
@@ -35,27 +35,30 @@ public class Observer<Element>: Observe {
             variable.onSubscribed(observer: self)
             state = .Binded
         }else{
-            fatalError("You cannot bind to multiple observable object")
+            fatalError("You cannot bind to multiple observable objects")
         }
     }
     
     
-    public func observe<T>(observable: ObservableField<T>, map:  ((_ value: T) -> Element)? = nil, mapBack: ((_ value: Element) -> T)? = nil) {
+    public func observe<T>(observable: ObservableField<T>, map:  ((_ value: T) -> Void)? = nil, mapBack: ((_ value: Element) -> T)? = nil) {
         if state == .None {
             self.observable = observable
             self.map = map
-            observable.setMapBack(mapBack: mapBack)
+            //            observable.setMapBack(mapBack: mapBack)
             observable.onSubscribed(observer: self)
             state = .Observed
         }else{
-            fatalError("You cannot bind to multiple observable object")
+            fatalError("You cannot observe to multiple observable objects")
         }
     }
     
     override func onObservedValueChanged<T>(value: T) {
         if let map = self.map as? (_ value: T) -> Element {
             _value = map(value)
-        }else{
+        } else if let map = self.map as? (_ value: T) -> Void {
+            map(value)
+        }
+        else{
             _value = value as? Element
         }
         
