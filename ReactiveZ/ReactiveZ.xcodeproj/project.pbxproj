@@ -14,9 +14,9 @@
 		F432B6CD2077547D00118CDD /* ExtensionPointerArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C82077547D00118CDD /* ExtensionPointerArray.swift */; };
 		F432B6CE2077547D00118CDD /* ObservableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6C92077547D00118CDD /* ObservableField.swift */; };
 		F432B6D02077548A00118CDD /* RzTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432B6CF2077548A00118CDD /* RzTextField.swift */; };
-		F4E770A72090176F00026247 /* FlyweightObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E770A42090176E00026247 /* FlyweightObserver.swift */; };
 		F4E770A82090176F00026247 /* Disposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E770A52090176E00026247 /* Disposal.swift */; };
-		F4E770A92090176F00026247 /* Extension+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E770A62090176F00026247 /* Extension+TextField.swift */; };
+		F4E770A92090176F00026247 /* Extension+Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E770A62090176F00026247 /* Extension+Controls.swift */; };
+		F4E770AB20902AA800026247 /* FlyweightObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E770AA20902AA800026247 /* FlyweightObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		F432B6C82077547D00118CDD /* ExtensionPointerArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionPointerArray.swift; sourceTree = "<group>"; };
 		F432B6C92077547D00118CDD /* ObservableField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableField.swift; sourceTree = "<group>"; };
 		F432B6CF2077548A00118CDD /* RzTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RzTextField.swift; sourceTree = "<group>"; };
-		F4E770A42090176E00026247 /* FlyweightObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlyweightObserver.swift; sourceTree = "<group>"; };
 		F4E770A52090176E00026247 /* Disposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposal.swift; sourceTree = "<group>"; };
-		F4E770A62090176F00026247 /* Extension+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+TextField.swift"; sourceTree = "<group>"; };
+		F4E770A62090176F00026247 /* Extension+Controls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Controls.swift"; sourceTree = "<group>"; };
+		F4E770AA20902AA800026247 /* FlyweightObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlyweightObserver.swift; path = ReactiveZ/FlyweightObserver.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 		F4E48594207D9C3E0074C338 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				F4E770A42090176E00026247 /* FlyweightObserver.swift */,
-				F4E770A62090176F00026247 /* Extension+TextField.swift */,
+				F4E770AA20902AA800026247 /* FlyweightObserver.swift */,
+				F4E770A62090176F00026247 /* Extension+Controls.swift */,
 				F432B6C82077547D00118CDD /* ExtensionPointerArray.swift */,
 			);
 			path = extension;
@@ -175,14 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E770AB20902AA800026247 /* FlyweightObserver.swift in Sources */,
 				F4E770A82090176F00026247 /* Disposal.swift in Sources */,
 				F432B6CA2077547D00118CDD /* Observe.swift in Sources */,
 				F432B6D02077548A00118CDD /* RzTextField.swift in Sources */,
 				F432B6CE2077547D00118CDD /* ObservableField.swift in Sources */,
-				F4E770A92090176F00026247 /* Extension+TextField.swift in Sources */,
+				F4E770A92090176F00026247 /* Extension+Controls.swift in Sources */,
 				F432B6CC2077547D00118CDD /* Observable.swift in Sources */,
 				F432B6CD2077547D00118CDD /* ExtensionPointerArray.swift in Sources */,
-				F4E770A72090176F00026247 /* FlyweightObserver.swift in Sources */,
 				F432B6CB2077547D00118CDD /* Observer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

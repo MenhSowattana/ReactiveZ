@@ -7,9 +7,14 @@
 //
 
 import UIKit
-
 public class Disposal {
-    private var identifiers: [String] = []
+    
+    public var identifiers: [String] = []
+    
+    public init() {
+        
+    }
+    
     public func add(identifier: String) {
         if !identifiers.contains(identifier) {
             identifiers.append(identifier)
