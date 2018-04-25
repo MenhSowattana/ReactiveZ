@@ -21,10 +21,14 @@ public class Observer<Element>: Observe {
     
     var state = ObserveState.None
     var map: Any?
-    var update: ((_ value: Element?) ->  Void)?
+    public var update: ((_ value: Element?) ->  Void)?
     
     public init(_ value: Element) {
         _value = value
+    }
+    
+    public override init() {
+        
     }
     
     public func bind<T>(to variable : ObservableField<T>, map: ((_ value: T) -> Element)? = nil, mapBack: ((_ value: Element) -> T)? = nil){
@@ -40,11 +44,10 @@ public class Observer<Element>: Observe {
     }
     
     
-    public func observe<T>(observable: ObservableField<T>, map:  ((_ value: T) -> Void)? = nil, mapBack: ((_ value: Element) -> T)? = nil) {
+    public func observe<T>(observable: ObservableField<T>, map:  ((_ value: T) -> Void)? = nil) {
         if state == .None {
             self.observable = observable
             self.map = map
-            //            observable.setMapBack(mapBack: mapBack)
             observable.onSubscribed(observer: self)
             state = .Observed
         }else{

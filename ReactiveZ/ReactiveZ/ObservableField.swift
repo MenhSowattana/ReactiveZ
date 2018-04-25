@@ -10,9 +10,11 @@ import UIKit
 
 public class ObservableField<Element>: Observable{
     
+    public typealias ObserveBlock = (_ value: Element) -> Void
     private var rx_value : Element!
     var observers : NSPointerArray?
     private var mapBack: Any?
+    private var defaultObserver: ObserveBlock?
     
     public init(_ value : Element) {
         rx_value = value
@@ -41,7 +43,11 @@ public class ObservableField<Element>: Observable{
         map(rx_value)
     }
     
-    public func set(value : Element){
+    public func observe(observer: ObserveBlock?) {
+        defaultObserver = observer
+    }
+    
+    public func set(value: Element){
         rx_value = value
         notifyObservers(value)
     }
@@ -52,6 +58,8 @@ public class ObservableField<Element>: Observable{
                 observers?.object(at: i)?.onObservedValueChanged(value: value)
             }
         }
+        guard let observer = defaultObserver else { return }
+        observer(value)
     }
     
     public func get() -> Element {
