@@ -42,29 +42,34 @@ extension UIControlObserver {
     }
     
     func onInitializeObserver() -> Void {}
-
+    
 }
 
 extension UITextField: UIControlObserver {
     
     typealias T = String
-
+    
     func onValuedUpdated(value: String) {
         self.text = value
     }
-
+    
     func getIdentifier() -> String {
         return String(UInt(bitPattern: ObjectIdentifier(self)))
     }
-
+    
     func onInitializeObserver() {
         addTarget(self, action: #selector(textChanged(sender:)), for: .editingChanged)
     }
-
+    
+    public func setText(_ str: String) {
+        text = str
+        rz.update(value: text ?? "")
+    }
+    
     @objc func textChanged(sender: UITextField) {
         rz.update(value: text ?? "")
     }
-
+    
 }
 
 extension UILabel: UIControlObserver {
