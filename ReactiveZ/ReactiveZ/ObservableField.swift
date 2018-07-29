@@ -16,7 +16,7 @@ public class ObservableField<Element>: Observable{
     private var mapBack: Any?
     private var defaultObserver: ObserveBlock?
     
-    public init(_ value : Element) {
+    public init(_ value : Element, notify: Bool? = true) {
         rx_value = value
         observers = NSPointerArray.weakObjects()
     }

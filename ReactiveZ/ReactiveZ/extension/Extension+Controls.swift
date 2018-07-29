@@ -72,6 +72,33 @@ extension UITextField: UIControlObserver {
     
 }
 
+extension UITextView: UIControlObserver, UITextViewDelegate {
+    
+    typealias T = String
+    
+    func onValuedUpdated(value: String) {
+        self.text = value
+    }
+    
+    func getIdentifier() -> String {
+        return String(UInt(bitPattern: ObjectIdentifier(self)))
+    }
+    
+    func onInitializeObserver() {
+        self.delegate = self
+    }
+    
+    public func textViewDidChange(_ textView: UITextView) {
+        rz.update(value: text ?? "")
+    }
+    
+    public func setText(_ str: String) {
+        text = str
+        rz.update(value: text ?? "")
+    }
+    
+}
+
 extension UILabel: UIControlObserver {
     
     typealias T = String
@@ -113,4 +140,6 @@ extension UIButton: UIControlObserver {
     }
     
 }
+
+
 
