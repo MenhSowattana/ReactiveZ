@@ -11,9 +11,7 @@ public class Disposal {
     
     public var identifiers: [String] = []
     
-    public init() {
-        
-    }
+    public init() {}
     
     public func add(identifier: String) {
         if !identifiers.contains(identifier) {

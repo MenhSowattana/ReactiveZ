@@ -12,7 +12,7 @@ import UIKit.UIImageView
 import UIKit.UIButton
 import UIKit.UILabel
 
-protocol UIControlObserver: AnyObject {
+public protocol UIControlObserver: AnyObject {
     associatedtype T
     func onValuedUpdated(value: T)
     func getIdentifier() -> String
@@ -41,23 +41,23 @@ extension UIControlObserver {
         }
     }
     
-    func onInitializeObserver() -> Void {}
+    public func onInitializeObserver() -> Void {}
     
 }
 
 extension UITextField: UIControlObserver {
     
-    typealias T = String
+    public typealias T = String
     
-    func onValuedUpdated(value: String) {
+    public func onValuedUpdated(value: String) {
         self.text = value
     }
     
-    func getIdentifier() -> String {
+    public func getIdentifier() -> String {
         return String(UInt(bitPattern: ObjectIdentifier(self)))
     }
     
-    func onInitializeObserver() {
+    public func onInitializeObserver() {
         addTarget(self, action: #selector(textChanged(sender:)), for: .editingChanged)
     }
     
@@ -74,17 +74,17 @@ extension UITextField: UIControlObserver {
 
 extension UITextView: UIControlObserver, UITextViewDelegate {
     
-    typealias T = String
+    public typealias T = String
     
-    func onValuedUpdated(value: String) {
+    public func onValuedUpdated(value: String) {
         self.text = value
     }
     
-    func getIdentifier() -> String {
+    public func getIdentifier() -> String {
         return String(UInt(bitPattern: ObjectIdentifier(self)))
     }
     
-    func onInitializeObserver() {
+    public func onInitializeObserver() {
         self.delegate = self
     }
     
@@ -101,13 +101,13 @@ extension UITextView: UIControlObserver, UITextViewDelegate {
 
 extension UILabel: UIControlObserver {
     
-    typealias T = String
+    public typealias T = String
     
-    func onValuedUpdated(value: String) {
+    public func onValuedUpdated(value: String) {
         self.text = value
     }
     
-    func getIdentifier() -> String {
+    public func getIdentifier() -> String {
         return String(UInt(bitPattern: ObjectIdentifier(self)))
     }
     
@@ -115,13 +115,13 @@ extension UILabel: UIControlObserver {
 
 extension UIImageView: UIControlObserver {
     
-    typealias T = UIImage
+    public typealias T = UIImage
     
-    func onValuedUpdated(value: UIImage) {
+    public func onValuedUpdated(value: UIImage) {
         self.image = value
     }
     
-    func getIdentifier() -> String {
+    public func getIdentifier() -> String {
         return String(UInt(bitPattern: ObjectIdentifier(self)))
     }
     
@@ -129,13 +129,13 @@ extension UIImageView: UIControlObserver {
 
 extension UIButton: UIControlObserver {
     
-    typealias T = String
+    public typealias T = String
     
-    func onValuedUpdated(value: String) {
+    public func onValuedUpdated(value: String) {
         self.setTitle(value, for: .normal)
     }
     
-    func getIdentifier() -> String {
+    public func getIdentifier() -> String {
         return String(UInt(bitPattern: ObjectIdentifier(self)))
     }
     
